@@ -14,7 +14,7 @@ export default function ContactForm() {
 
   const onAddNewContact = evt => {
     evt.preventDefault();
-    contacts.some(contact => contact.name === name)
+    contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())
       ? alert(`${name} is already in contacts.`)
       : dispatch(
           addContact({
